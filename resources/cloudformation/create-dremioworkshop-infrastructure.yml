@@ -1,0 +1,209 @@
+Parameters:
+  LatestAmiId:
+    Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+    Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
+    AllowedValues:
+      - /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
+    Description: Image ID for the EC2 helper instance. DO NOT change this.
+Resources:
+  EC2SecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Security Group for EC2
+      VpcId: !Ref PubPrivateVPC
+      Tags:
+        - Key: Name
+          Value: dremio-Workshop-ec2-SecGroup
+  SelfIngress:
+    Type: 'AWS::EC2::SecurityGroupIngress'
+    DependsOn: EC2SecurityGroup
+    Properties:
+      GroupId: !Ref EC2SecurityGroup
+      IpProtocol: '-1'
+      SourceSecurityGroupId: !Ref EC2SecurityGroup
+
+  PubPrivateVPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: 172.31.0.0/16
+      Tags:
+        - Key: Name
+          Value: 'dremioWorkshop'
+  PublicSubnet1:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref PubPrivateVPC
+
+      CidrBlock: 172.31.1.0/24
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: 'dremioWorkshopPublicSubnet'
+
+
+  PrivateSubnet1:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref PubPrivateVPC
+
+      CidrBlock: 172.31.3.0/24
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: 'dremioWorkshopPrivateSubnet'
+
+
+  InternetGateway:
+    Type: 'AWS::EC2::InternetGateway'
+    Properties:
+      Tags:
+        - Key: Name
+          Value: !Join [_, [!Ref 'AWS::StackName']]
+        - Key: Network
+          Value: Public
+
+  GatewayToInternet:
+    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Properties:
+      VpcId: !Ref PubPrivateVPC
+      InternetGatewayId: !Ref InternetGateway
+
+  PublicRouteTable:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: !Ref PubPrivateVPC
+      Tags:
+        - Key: Network
+          Value: Public
+
+  PublicRoute:
+    Type: 'AWS::EC2::Route'
+    DependsOn: GatewayToInternet
+    Properties:
+      RouteTableId: !Ref PublicRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref InternetGateway
+
+  PublicSubnet1RouteTableAssociation:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      SubnetId: !Ref PublicSubnet1
+      RouteTableId: !Ref PublicRouteTable
+
+
+
+  NatGateway:
+    Type: "AWS::EC2::NatGateway"
+    DependsOn: NatPublicIP
+    Properties:
+      AllocationId: !GetAtt NatPublicIP.AllocationId
+      SubnetId: !Ref PublicSubnet1
+
+  NatPublicIP:
+    Type: "AWS::EC2::EIP"
+    DependsOn: PubPrivateVPC
+    Properties:
+      Domain: vpc
+
+  PrivateRouteTable:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: !Ref PubPrivateVPC
+      Tags:
+        - Key: Network
+          Value: Private
+
+  PrivateRoute:
+    Type: 'AWS::EC2::Route'
+    Properties:
+      RouteTableId: !Ref PrivateRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      NatGatewayId: !Ref NatGateway
+
+  PrivateSubnet1RouteTableAssociation:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      SubnetId: !Ref PrivateSubnet1
+      RouteTableId: !Ref PrivateRouteTable
+
+  DataLakeBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: !Join
+        - '-'
+        - - dremio-data-lake
+          - !Ref 'AWS::AccountId'
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+  AdminUser:
+    Type: 'AWS::IAM::User'
+    Properties:
+      Path: /
+      UserName: dremio-user
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/AdministratorAccess'
+  EC2Role:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      Path: /
+      RoleName: dremio-EC2Role
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - ec2.amazonaws.com
+            Action: 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/AdministratorAccess'
+  EC2InstanceProfile:
+    Type: 'AWS::IAM::InstanceProfile'
+    Properties:
+      Path: /
+      Roles:
+        - !Ref EC2Role
+
+  WorkingEC2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: t2.small
+      ImageId: !Ref LatestAmiId
+      IamInstanceProfile: !Ref EC2InstanceProfile
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: 'true'
+          DeviceIndex: '0'
+          GroupSet:
+            - !Ref EC2SecurityGroup
+          SubnetId: !Ref PublicSubnet1
+      UserData: !Base64
+        'Fn::Join':
+          - ''
+          - - |
+              #!/bin/bash -ex
+            - >
+              aws configure set default.s3.multipart_threshold 128MB
+            - >
+              aws configure set default.s3.max_concurrent_requests 20
+            - >
+            - 'aws s3 sync  s3://modernization-workshop s3://'
+            - !Ref DataLakeBucket
+            - '/dremioworkshopdata/'
+      Tags:
+        - Key: Name
+          Value: EC2-dremio-box
+
+
+
+
+Outputs:
+  Workshopbucket:
+    Description: S3 bucket containing workshop files
+    Value: !Ref DataLakeBucket
+
+
+
