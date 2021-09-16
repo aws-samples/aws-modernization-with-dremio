@@ -10,7 +10,7 @@ weight = 1012
     
     <br/><br/>
     
-    <ol>
+   <ol>
         <li>From the Dremio AWS Marketplace Listing, click the yellow <b>"Continue to Subscribe"</b> button on the right.</li>
          <img src="../../images/dremio3.png" style="margin:15px 0px; border:1px solid black"/>
         <li> Accept the terms and conditions by clicking on the yellow button. This will take few minutes and at the end will enable the <b>"Continue to Configuration"</b> button on top right hand corner. Click on the yellow  <b>Continue to Configuration </b> button in the top right. </li>
@@ -22,8 +22,7 @@ weight = 1012
          <ul>
         <li>Delivery Method: Dremio Deployment</li>
         <li>Software Version: Select latest</li>
-        <li>Region: <b>US West (Oregon)</b></li>
-        
+        <li>Region: <b>US West (Oregon)</b></li>(Note: Image below is not representative of region)
         </ul>
         <br/>
         Once complete, click the yellow <b>"Continue to Launch button"</b>
@@ -38,7 +37,7 @@ weight = 1012
 
 <img src="../../images/dremio5.png" style="margin:15px 0px; border:1px solid black"/>
 
-    </ol>
+   </ol>
 
    
 </div>

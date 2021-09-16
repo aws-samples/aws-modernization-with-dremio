@@ -16,8 +16,8 @@ weight = 1014
              <ol>
            <li> Authenticating your AWS Instance: </li>
   
-           <b>(This is only applicable if you have existing project, else skip to "Creating a  Project")</b>   </br>
-           One the Authentication Screen (pictured above) Dremio will need to verify the EC2 instance ID that you are using.  Dremio will automatically add your Instance ID.  Once your Instance ID has populated, press Authenticate.
+           <b>(This is only applicable if you have existing project, else skip to "Create a  Project")</b>   </br>
+           On the Authentication Screen (pictured above) Dremio will need to verify the EC2 instance ID that you are using.  Dremio will automatically add your Instance ID.  Once your Instance ID has populated, press Authenticate.
 
    <br/>
   <li> Creating a Project:</li>

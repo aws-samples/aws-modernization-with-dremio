@@ -12,7 +12,7 @@ weight = 1013
        <ol>
            <li>Create Stack</li>
             <br/>
-           Ensure the following options are checked to mirror the image below.  <b>*Note*</b> that the Amazon S3 URL will be different from the example.  Once the correct options are checked, click <b>"next"</b> at the bottom of the screen. 
+           Ensure the following options are checked to mirror the image below.  <b>*Note*</b> that the Amazon S3 URL will be different from the example.  Once the correct options are checked, click <b>"Next"</b> at the bottom of the screen. 
 <img src="../../images/dremio6.png" style="margin:15px 0px; border:1px solid black"/>
            <li> Specify Stack Details </li>
             <br/>
@@ -23,7 +23,7 @@ Make your selections as per the image below.
    
    <img src="../../images/dremio7.png" style="margin:15px 0px; border:1px solid black"/>
   <li>Configure Stack Options</li>
-     For this page, you do not need to add anything additional, continue by pressing <b>"next"</b> at the bottom of the screen
+     For this page, you do not need to add anything additional, continue by pressing <b>"Next"</b> at the bottom of the screen
  <br/>
 <li> Review Stack  </li>
 Review the inputs and make sure they match the steps above.
