@@ -17,7 +17,7 @@ The Dremio Home screen has 4 major areas:
         <li><b>Home Space</b></li>
         The Home Space is a private user work area that can contain both physical and virtual datasets.  Uploaded files promoted to a physical dataset are stored in the home space.  Data can be curated in the home space until its ready to be shared by moving it to a shared space. 
         <li><b>Spaces</b></li>
-        Spaces are shared locations for saving virtual datasets. Spaces allow grouping datasets by a common theme such as a project or geographic region.  Each space can be configured for sharing and other privileges.  Users will not see spaces for which they have no authorization. 
+        Spaces are shared locations for saving virtual datasets. Spaces allow grouping datasets by a common theme such as a project or geographic region.  Each space can be configured for sharing data and other privileges.  Users will not see spaces for which they have no authorization. 
         <li><b>Data Connections</b> </li>
         Dremio can connect to a variety of Data Lake storage and External Sources.  This area is where you create and manage your different data connections
         
