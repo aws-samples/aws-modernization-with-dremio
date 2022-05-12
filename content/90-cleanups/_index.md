@@ -4,18 +4,28 @@ weight = 90
 chapter = true
 +++
 <center><h2>Cleaning Up</h2></center>
+### In this section you will delete your Dremio Cloud & Dremio Workshop CloudFormation Templates.
+#### Delete your Dremio Cloud CloudFormation Template
 
-<div style="text-align: justify">
-    <ol>
-   
- <li>Manually delete all the Dremio instances that were created and also the EFS.
-    </li>
-    <li>Delete the EC2 key pair "dremioworkshop" that you created 
-        </li>
-    <li>Empty data lake bucket(dremio-data-lake-XXXXXX) created for the workshop</li>
-    <li>Select "dremio-workshop" cloudformation stack and delete the stack. This should remove all the objects created by it.
-  </li>
-     
+   If you want to continue to use the Dremio Cloud Free for Life version skip this step and move to the bottom section.
+
+
     
-</ol>
-</div>
+ 1. From your AWS console, navigate to the CloudFormation service and click “Stacks” on the left of your screen.
+       <br/>
+     <br/>
+     You will see the two cloud formation stacks that were create for this lab.  Click on the DevDay stack and then click delete on the top right of your screen.  Confirm Delete by clicking the Orange “Delete Stack” box.  
+
+     <img src="../../images/newdremio58.png" style="margin:15px 0px; border:1px solid black"/>
+     
+#### Delete your Dremio Workshop CloudFormation Template     
+
+    
+ 2. Empty data lake bucket(dremio-data-lake-[AccountID]) created for the workshop</li>
+ 
+ 3. From your AWS console, navigate to the CloudFormation service and click “Stacks” . You will see the two cloud formation stacks that were create for this lab.  Click on the dremio-workshop stack and then click delete on the top right of your screen.  Confirm Delete by clicking the Orange “Delete Stack” box.  
+
+
+     
+  
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Connect to Data Sources on Dremio Modernization Workshop</title>
+    <link>/30-connect-data-source.html</link>
+    <description>Recent content in Connect to Data Sources on Dremio Modernization Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="/30-connect-data-source/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Connect to S3</title>
+      <link>/30-connect-data-source/301-connect-to-s3.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/30-connect-data-source/301-connect-to-s3.html</guid>
+      <description>Connect to S3 Data Source 
+ From the Dremio Home Screen Click the + icon next to “Data Lakes”  From the “Add Data Lake” box, click Amazon S3 From the “New Amazon S3 Source” Add the following information to the General tab:    Name: [AWS S3 Modernization Workshop]   AWS Access Key:Go to IAM console and look for dremio-user,create access key under security credentials tab and use it   AWS Secret Key: Go to IAM console and look for dremio-user,create secret key under security credentials tab and use it   Click Save.</description>
+    </item>
+    
+  </channel>
+</rss>

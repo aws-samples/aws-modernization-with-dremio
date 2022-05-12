@@ -1,0 +1,295 @@
+[
+{
+	"uri": "/",
+	"title": "Dremio  Workshop",
+	"tags": [],
+	"description": "",
+	"content": " Dremio Modernization Workshop Welcome In this workshop you will learn how to use Dremio and integrate it with S3 and Tableau.\nLearning Objectives The intent of this workshop is to educate users on the features of Dremio and how to accelerate Time-to-Insight using Dremio on AWS. A Background in AWS Glue and other AWS Analytics services is not required, but they may come in handy. Workshop Goals: \n Section 1: Deploying Dremio  Section 2: Explore Dremio Home Screen  Section 3: Connect Data Source  Section 4: Exploring a Dataset  Section 5: Creating a Virtual Dataset (VDS)  Section 6: Connecting to Tableau  Section 7: Exploring Dremio Jobs  Section 8: Exploring the Dataset in Tableau  Section 9: Joining Datasets in Dremio\nThe examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how various AWS services can be architected to build a solution while demonstrating best practices along the way. These examples are not intended for use in production environments.  "
+},
+{
+	"uri": "/10-section1.html",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "Accelerate Time-to-Insight with Dremio, AWS \u0026amp; Tableau\nThe intent of this workshop is to educate users on the features of Dremio and how to accelerate Time-to-Insight using Dremio on AWS.  "
+},
+{
+	"uri": "/20-explore-dremio.html",
+	"title": "Explore Dremio Home Screen",
+	"tags": [],
+	"description": "",
+	"content": "Explore Dremio \nIn this section, you will explore the Dremio User Interface and learn about some of the different aspects and capabilities of Dremio. Let's walk through :  Explore Dremio Home Screen   Creating a folder in your personal space   Set up a Space to collaborate with other users   Explore the different data connections that Dremio supports    "
+},
+{
+	"uri": "/30-connect-data-source.html",
+	"title": "Connect to Data Sources",
+	"tags": [],
+	"description": "",
+	"content": "Connect Data Sources \nDremio supports a variety of data sources, S3, ADLS, HDFS, NoSQL databases, relational databases, local filesystems. In this section you will connect Dremio to an AWS S3 Bucket and explore the data source. Let's walk through :  Connect to S3    "
+},
+{
+	"uri": "/40-explore-data-create-virtual-datasets.html",
+	"title": "Explore the dataset",
+	"tags": [],
+	"description": "",
+	"content": "Explore the dataset \nIn this section, you will search for a specific dataset, view the attributes of the dataset, make changes and create a new Virtual Dataset. For the purposes of this workshop, we will be using a dataset that captures Taxi Data in NYC.   Finding Dataset   Exploring Dataset    "
+},
+{
+	"uri": "/50-create-virtual-datasets.html",
+	"title": "Create Virtual Dataset",
+	"tags": [],
+	"description": "",
+	"content": "Explore the dataset \nIn this section you are going to create a table from a dataset that is stored in the Amazon S3 Cloud Data Lake storage. You will then explore and leverage “Reflections” in Dremio to help accelerate the query performance of the dataset.   Creating a Virtual Dataset from the Data Lake Storage   Adding Tags and Details to Dataset Catalog.    Creating a Calculated Field   Editing a Virtual Dataset   Setting up a Data Reflection    "
+},
+{
+	"uri": "/60-connecting-to-tableau.html",
+	"title": "Connecting to Tableau ",
+	"tags": [],
+	"description": "",
+	"content": "Connecting to Tableau\nIn this section you will connect Dremio to Tableau. Dremio has a native connector to Tableau that allows for a frictionless ability to connect and begin analyzing your data. For this lab, you will be using Tableau Online but note that Dremio can connect to Tableau Desktop and Server as well. For this lab you will be signing up for a free trial of Tableau Online.    Signing up for a free trial of Tableau Online   Connecting Tableau Online to Dremio   Connecting to your Dataset    "
+},
+{
+	"uri": "/70-exploring-dremio-jobs.html",
+	"title": "Exploring Dremio Jobs ",
+	"tags": [],
+	"description": "",
+	"content": "Exploring Dremio Jobs \nIn this section we are going to use Tableau to explore the NYC Taxi Dataset while inspecting the queries in the Dremio Jobs Tab.  Counting the Records   Exploring Dremio Jobs     "
+},
+{
+	"uri": "/75-exploring-dataset-in-tableau.html",
+	"title": "Exploring the Dataset in Tableau ",
+	"tags": [],
+	"description": "",
+	"content": "Exploring the Dataset in Tableau \nIn this section you will build visualizations in Tableau based on the NYC_Taxi dataset.  Reviewing count of records by Date   How Does Month Impact Surcharge   Reviewing the Jobs in Dremio    "
+},
+{
+	"uri": "/80-joining-datasets-in-dremio.html",
+	"title": "Joining Datasets in Dremio  ",
+	"tags": [],
+	"description": "",
+	"content": "Joining Datasets in Dremio \nIn this section you are going to combine what you have learned in this lab by creating a new Physical Data Set from your Data Lake Storage and then saving it as a Virtual Dataset. Next you are going to make sure the VDS is properly prepared for analysis. Finally, you will learn how to join datasets in Dremio and then connect the new joined table to Tableau to perform your analysis and create visualizations.  Creating Physical Dataset   Joining the Taxi \u0026amp; Weather Dataset   Connect to Joined Dataset in Tableau     "
+},
+{
+	"uri": "/90-cleanups.html",
+	"title": "Clean up",
+	"tags": [],
+	"description": "",
+	"content": "Cleaning Up\n Manually delete all the Dremio instances that were created and also the EFS.  Delete the EC2 key pair \"dremioworkshop\" that you created  Empty data lake bucket(dremio-data-lake-XXXXXX) created for the workshop Select \"dremio-workshop\" cloudformation stack and delete the stack. This should remove all the objects created by it.    "
+},
+{
+	"uri": "/10-section1/100-what-is-lf.html",
+	"title": "Deploying Dremio Workshop Infrastructure",
+	"tags": [],
+	"description": "",
+	"content": "Deploying Dremio Workshop \nIn this section, you will learn how to quickly deploy a Dremio environment on the AWS Marketplace using a CloudFormation Template. You will also run another Cloudformation template to set up infrastructure needed to do the workshop. To setup workshop environment, follow these steps:   Log into AWS account with your credentials.   Launch the stack. Click Here   Click `Next` till the end and then select acknowledgement checkbox. Then click \"Create Stack\"  While Cloudformation stack is running, go to Services  EC2  Network \u0026 Security  Key Pairs, and then choose Create Key Pair. Name the key pair  \"dremioworkshop\" and click \"Create Key Pair\"      "
+},
+{
+	"uri": "/10-section1/101-deploying-dremio.html",
+	"title": "How It Works",
+	"tags": [],
+	"description": "",
+	"content": "How it works\nBefore we go ahead and work on deploying Dremio, let us understand what is Dremio and how it works. Dremio is a SQL Lakehouse Platform that delivers fast interactive queries directly on S3 using an Apache Arrow-based engine and end-to-end query acceleration techniques such as columnar caching, transparent materialized views, and vectorized execution.   Data science applications and BI tools can connect to Dremio using Arrow Flight, ODBC, JDBC and REST interfaces. For data science applications in particular, Arrow Flight provides up to a 1000x increase in throughput over ODBC/JDBC using parallel high-speed transfers.   In addition, Dremio offers a semantic layer making it easy to transform and aggregate data from one or more sources into virtual datasets without the need for complex pipelines. The platform provides a combination of role-based access controls, row- and column-level permissions, and data masking to ensure secure and governed access to these datasets.   Data stays in the customer’s AWS account and is stored in open formats, providing the flexibility to use multiple analytic services without vendor lock-in.    In this section, we’ll cover the following topics:  Deploying Dremio    Configuring and Launching Dremio   Creating the Dremio CloudFormation Stack   Launching Dremio and Setting up a Dremio Project    "
+},
+{
+	"uri": "/20-explore-dremio/201-dremio-home-screen.html",
+	"title": "Explore Dremio Home Screen",
+	"tags": [],
+	"description": "",
+	"content": "Explore Dremio Home Screen The Dremio Home screen has 4 major areas:  Home Space The Home Space is a private user work area that can contain both physical and virtual datasets. Uploaded files promoted to a physical dataset are stored in the home space. Data can be curated in the home space until its ready to be shared by moving it to a shared space. Spaces Spaces are shared locations for saving virtual datasets. Spaces allow grouping datasets by a common theme such as a project or geographic region. Each space can be configured for sharing data and other privileges. Users will not see spaces for which they have no authorization. Data Connections  Dremio can connect to a variety of Data Lake storage and External Sources. This area is where you create and manage your different data connections Home Space Wiki You can create and edit information for any source, space, or folder. This sidebar always shows the wiki for the current source, space or folder you are browsing.   Dremio Key Objects:  "
+},
+{
+	"uri": "/20-explore-dremio/202-creating-a-folder-in-your-personal-space.html",
+	"title": "Creating a folder in your personal space",
+	"tags": [],
+	"description": "",
+	"content": "Creating a folder in your personal space   From the Dremio home screen, click the folder icon at the top right of the Home Space.   Provide a name to the folder and click Save Note: You can use this folder to save any Physical Datasets (PDS) or Virtual Datasets (VDS) that you create during this workshop.   "
+},
+{
+	"uri": "/20-explore-dremio/203-set-up-a-space-to-collaborate-with-other-users.html",
+	"title": "Set up a Space to collaborate with other users",
+	"tags": [],
+	"description": "",
+	"content": "Set up a Space to collaborate with other users   From the Dremio home screen click the \"+\" icon next to “Spaces” .   Provide a name for your Space and click Save   "
+},
+{
+	"uri": "/20-explore-dremio/204-explore-the-different-data-connections-that-dremio-supports.html",
+	"title": "Explore the different data connections that Dremio supports",
+	"tags": [],
+	"description": "",
+	"content": "Explore the different data connections that Dremio supports   Under “Data Lakes”  in the bottom left corner of the Dremio home screen, click \"+\" icon. You will see a list of the various Table Stores \u0026 File Stores that Dremio natively supports. We will be using this to create a connection to an AWS S3 data source in a later step.   Under “External Sources” in the bottom left corner of the Dremio home screen click \"+\" icon.  You will see that Dremio also connects to a variety of external sources in addition to data lake storage.    "
+},
+{
+	"uri": "/30-connect-data-source/301-connect-to-s3.html",
+	"title": "Connect to S3",
+	"tags": [],
+	"description": "",
+	"content": "Connect to S3 Data Source \n From the Dremio Home Screen Click the + icon next to “Data Lakes”  From the “Add Data Lake” box, click Amazon S3 From the “New Amazon S3 Source” Add the following information to the General tab:    Name: [AWS S3 Modernization Workshop]   AWS Access Key:Go to IAM console and look for dremio-user,create access key under security credentials tab and use it   AWS Secret Key: Go to IAM console and look for dremio-user,create secret key under security credentials tab and use it   Click Save.  Dremio is now connected to an AWS S3 bucket that contains NYC Taxi and Weather Data. The name of this bucket will be \" dremio-data-lake-AccountID\"  To verify that Dremio is properly connected to AWS S3, under Data Lakes in the bottom left corner, you should see dremio datalake buckest listed    "
+},
+{
+	"uri": "/40-explore-data-create-virtual-datasets/401-finding-dataset.html",
+	"title": "Finding Dataset",
+	"tags": [],
+	"description": "",
+	"content": "  Dremio’s integrated data catalog allows us to search for datasets by simply typing a string in the search box. Once we type in the string, it will automatically provide a list of available datasets matching our search term.  Navigate to the “Search Catalog” bar at the top of the screen. In the search catalog box, enter Taxi. You should return a result that matches this: Hover over the green grid icon, until you see and then click on the “i”. Dremio enables the exploration of the metadata of any dataset by selecting the i icon for the dataset. This option shows the number of Jobs, Descendants, fields, and data types for each field.  Select the Virtual Dataset that says  “Demo Taxi Reflection”. Dremio will load a preview of the dataset as you can see in the image below.    "
+},
+{
+	"uri": "/40-explore-data-create-virtual-datasets/402-exploring-dataset.html",
+	"title": "Exploring Dataset",
+	"tags": [],
+	"description": "",
+	"content": "Now that we have selected a dataset to explore, let’s take a look at the different aspects of the Data Preview screen   5 regions in the image are described below:  Shows the dataset that is being used Dremio provides the ability to write specific SQL functions, add or remove columns and join datasets. We will explore this in greater detail later in the workshop. Is the preview window to the current dataset and the fields that the dataset contains. Depending on the size of the dataset, this might only be a sample of the entire dataset that Dremio will query Shows the number of records in the preview and the query response time Dremio can connect to a variety of the most popular BI and Data Science tools. Users can create a direct connection directly from the Dremio UI to Tableau and PowerBI     Next to SQL Editor, click the arrow head icon to expand the SQL Editor.  What do you see in the SQL Editor space? SELECT * FROM \"Demo Taxi Reflection\"  Explore the different fields in this dataset. You will notice that Dremio has applied a Data Type to each field. Here are the different Data Types:  Using the SQL Editor, count the number of records that are in this table by entering SELECT COUNT(*) FROM \"Demo Taxi Reflection\".  How many records are in this table? 492,111 Return to the Dremio Home Screen by clicking the Dremio Logo in the top left corner of your screen. It will ask you if you want to leave or save your changes, click “Leave”    "
+},
+{
+	"uri": "/50-create-virtual-datasets/501-create-virtual-dataset.html",
+	"title": "Creating a Virtual Dataset from the Data Lake Storage",
+	"tags": [],
+	"description": "",
+	"content": "  From your Dremio Home Screen, click on your AWS S3 Storage Connection labeled “AWS S3 Modernization Workshop” on the bottom left corner of your screen. In the top center portion of your screen you will see a folder with the name “dremio-data-lake-AccountID”. Click on that folder then click \"dremioworkshopdata\" folder and then click on the “Trips” Folder. You should now see Parquet files.   In Dremio you can convert a folder of files into a single Physical Dataset (PDS). Navigate your cursor to the top right of the screen and click on the icon (image below) to turn the folder of Parquet files into a PDS.   A pop-up window will appear. Dremio recognizes specific formats and will structure the table accordingly. For this table Dremio recognized that the folder it was combining was full or Parquet files. You do not need to do anything further on this page, click “Save”.  You are now previewing the Physical Data Set in the Dremio Preview Window. Notice the purple folder denoting a PDS in the top left corner of the screen.  Let’s explore the data set. How many records are there?  Type SELECT count(*) FROM trips into the SQL Editor and press Run.  There are 862,736,805 records in this data set.  Notice that now the purple folder denoting a Physical Dataset has been replaced with a green table indicating a Virtual Dataset. Since Dremio queries data directly on the Cloud Data Lake storage and does not copy data, when Dremio ran your query to count the number of records it automatically created a Virtual Dataset.   Enter SELECT * FROM trips into the SQL editor and click run. Notice the duration to run the query on the right side of the screen.    Next, we are going to save this VDS in our Dremio Home Space. Click the save icon and save the VDS as NYC_Taxi to your Home Space.  **Note your Home Space name will be your Dremio username preceeded with an @.  "
+},
+{
+	"uri": "/50-create-virtual-datasets/502-add-tags-dataset.html",
+	"title": "Adding Tags and Details to Dataset Catalog. ",
+	"tags": [],
+	"description": "",
+	"content": "  Now that you have saved your VDS a couple additional tabs will appear on the top of your Preview Window. They are Catalog \u0026 Reflection. Navigate to the “Catalog” tab within your NYC_Taxi VDS.  The Catalog tab acts as a wiki allowing you and others that have access, to document and share information pertaining to the specific Virtual Dataset. Here you can post information about the dataset, updates that have been made, owners and much more. Click  “Add Wiki Content” and input a description based on your knowledge of the dataset.  From this tab, you can also add tags to help yourself and others easily find the VDS, and quickly understand that dataset without having to preview it. On the top left of the page, you can input specific tags.  Based on this dataset, what are some tags you might input? Taxi, NYC   Here is an example of what your Catalog tab should look like.   "
+},
+{
+	"uri": "/50-create-virtual-datasets/503-create-calculated-field.html",
+	"title": " Creating a Calculated Field",
+	"tags": [],
+	"description": "",
+	"content": " Navigate back to the Data Tab for your NYC_Taxi dataset and look at the different fields in the dataset.  The field titled  “trip_distance”  is a float field that shows the distance of each trip in miles. What if someone who wanted to use this dataset wanted to know the trip distance in kilometers? With Dremio, you can create a calculated field. Click the downward arrow next to the “trip_distance” field and then click on “Calculated Field”  From the  “Add Calculated Field”  page you can use SQL functions to create or replace fields in the Dremio Virtual Dataset. To convert Miles to KM, you will multiply  “trip_distance” by 1.6.  Dremio provides the ability to either replace the existing field with the new calculated field or to create a new field. Since we want to keep both miles and kilometers, we are going to uncheck the “Drop Source Field” box and name the field  “trip_distance_km” . Once this is done, press  Apply .  Once you select Apply, Dremio returns to the Data Tab. Now you can see that there is a new field called “trip_distance_km” as well as the SQL command that Dremio has written.  Since we have made a modification to the Virtual Dataset, we are going to save this as a new VDS to our Home Space. Click the icon and save the VDS as “NYC_Taxi_KM” to your Home Space.   Navigate back to the Dremio Home Screen and you will notice two Virtual Datasets in your Home Space: NYC_Taxi \u0026 NYC_Taxi_KM. You will also notice that the tags you created for the NYC_Taxi dataset are visible. This makes it easy to identify datasets.    "
+},
+{
+	"uri": "/50-create-virtual-datasets/504-edit-vitual-dataset.html",
+	"title": "Editing a Virtual Dataset",
+	"tags": [],
+	"description": "",
+	"content": "   From the Dremio home screen hover over the NYC_Taxi Dataset and click on the edit button. This will allow you to edit an already existing VDS.\n  Notice the fields pickup_datetime \u0026amp; dropoff_datetime include both the date and time as one value. For the purposes of this lab, we just need to keep the date.\n  Dremio provides different ways to separate and remove values from a specific field. For the purposes of this lab, we are going to convert the data type from a Date \u0026amp; Time field to a Date field. Click the dropdown arrow next to the pickup_datetime field and select “Convert Data Type”.  Under Select Type, select Date and press Apply. Notice that Dremio replaced the old field with the new field.\n Apply the same process to the dropoff_datetime field and press apply. After you are done your dataset should look like the screenshot below. Notice both pickup_datetime \u0026amp; dropoff_datetime now only include the date.  Now that we have removed time, we need to rename the field. Click the dropdown arrow next to the pickup_datetime field and select Rename. Rename the field pickup_date. Apply the same process for the dropoff_datetime field.  Save your edited dataset by clicking on the icon and selecting Save  \n"
+},
+{
+	"uri": "/50-create-virtual-datasets/505-set-reflection.html",
+	"title": "Setting up a Data Reflection",
+	"tags": [],
+	"description": "",
+	"content": "   Reflections are physically optimized representations of source data that Dremio maintains in order to accelerate query performance. Dremio can accelerate a query by utilizing one or more Data Reflections to partially or entirely satisfy that query, rather than processing the raw data in the underlying data source. There are various types of Data Reflections:    Raw reflections – A raw reflection includes one or more fields from the anchor dataset, sorted, partitioned and distributed by specific fields. Aggregation reflections – An aggregation reflection includes one or more dimension and measure fields from the anchor dataset, sorted, partitioned and distributed by specified fields.   Aggregation reflections – An aggregation reflection includes one or more dimension and measure fields from the anchor dataset, sorted, partitioned and distributed by specified fields.   Dremio will automatically determine the Aggregation Reflection based on the measures and dimensions in the table.  Return to the Dremio Home Screen.     In middle section, select NYC_Taxi dataset. Select the \"gear wheel\" and you will see \"Reflections\" tab. When you click on the “Reflections” Tab, Dremio will automatically determine the Aggregation Reflection based on the measures and dimensions in the table.   Toggle on the “Aggregation Reflection” and click Save. Dremio will create the reflection.   This could take a few minutes to complete. You will notice that next to “footprint” there will be a spinning wheel while Dremio is creating the reflection. When the reflection has been created, you will see a green check mark and a space size next to “footprint”.   "
+},
+{
+	"uri": "/60-connecting-to-tableau/601-sign-up.html",
+	"title": "Signing up for a free trial of Tableau Online",
+	"tags": [],
+	"description": "",
+	"content": "  Open a new tab in your browser and navigate to the following URL: https://sso.online.tableau.com/   From the Tableau Online Sign-up Screen, click “Sign-Up”. If you already have a Tableau account, feel free to use that account for this lab.  After clicking sign-up, Tableau will ask if you would like to start a free trial. Click the Orange “Start Your Free Trial” Button.  Enter your information to sign up for the Tableau free trial and press “Request Free Trial”  Follow the on-screen instructions to verify your email with Tableau.  After activating your Tableau Online instance from your email account, Tableau will direct you to your Tableau Online instance to create a username \u0026 password. For site selection, choose US-West Oregon (Point is to select same region as selected for Dremio deployment in AWS). Once you click activate, Tableau will automatically direct you to your Tableau Online instance. You will also be asked to \"Name Your Site\", you can name it anything.   Note: Password requirements are : Minimum of 8 characters, at least one uppercase letter, one lowercase letter, one number, and one special character.   "
+},
+{
+	"uri": "/60-connecting-to-tableau/602-connect-tableau-to-dremio.html",
+	"title": "Connecting Tableau Online to Dremio",
+	"tags": [],
+	"description": "",
+	"content": " From the Tableau Home Screen click “Explore”  found on the left side of the screen   From the “New” Drop down click “Workbook” In your new workbook, you will immediately see a “Connect to Data”  pop-up. From here you can connect to data already uploaded onto Tableau Online, files and data sources. For this lab, we are going to establish a connection to Dremio by clicking on “Connectors”  From the connectors tab, select Dremio. Another pop-up will appear asking for the Dremio server information to establish a connection. Enter the following information:   Server: IP Address of your Dremio instance. This will be part of Output tab when you ran Cloudformation from Marketplace as part of \"DremioPublicEndpoint\" string. You will have to parse the IP address from the string. When you navigate to the Dremio UI, you will see this in the URL Bar. *NOTE* Only input the IP address do not include HTTP or the Port.  Port: Leave the default port of 31010  Username: The Dremio username that you created earlier in the lab. If you do not know your username, you can find it in the top right corner of your Dremio instance  Password: The Dremio password that you created earlier in the lab  SSL: Leave unchecked  Once you have entered the correct information, press “Sign-In”   "
+},
+{
+	"uri": "/60-connecting-to-tableau/603-connect-tableau-dataset.html",
+	"title": "Connecting to your Dataset",
+	"tags": [],
+	"description": "",
+	"content": "Now that you have quickly connected Dremio to Tableau you can start to explore different tables without having to copy any of the data into Tableau. After a successful connection has been made Tableau will direct you to the “Data Source” tab in your new workbook.   From the Data Connections tab in your Tableau workbook, select the following from the dropdown menus    Under “Database”, select “DREMIO” Under “Schema”, enter the name of your Dremio Homespace (where you saved your VDS) Under Table, enter the name of the VDS (NYC_Taxi) that you saved in Dremio   Your Tableau Inputs should look like this (IP Address \u0026 Schema name will be different)  Drag the NYC_Taxi table from the left side under “Connections”  to the center of the workbook where it says  “Drag Tables Here”   Now that you have connected Dremio to Tableau and selected the Table to analyze, you can now start creating visualizations. Click on “Sheet 1” in the bottom left corner of your Tableau Workbook. Your screen should look like this:   "
+},
+{
+	"uri": "/70-exploring-dremio-jobs/701-counting-records.html",
+	"title": "Counting the Records",
+	"tags": [],
+	"description": "",
+	"content": "  From your Tableau Workbook drag the field “NYC_Taxi(count)” to the “Rows” bar on your worksheet.  What is the count of records in the dataset? 862736805 Navigate back to Dremio and open the “NYC_Taxi” dataset. Run a query to count the records by typing SELECT COUNT(*) FROM NYC_Taxi in the SQL editor and pressing Run. Is the count of records the same as Tableau? Yes     "
+},
+{
+	"uri": "/70-exploring-dremio-jobs/702-explore-dremio-jobs.html",
+	"title": "Exploring Dremio Jobs ",
+	"tags": [],
+	"description": "",
+	"content": "  In Dremio, click on the Jobs icon at the top of your screen. Dremio will ask you if you want to save any changes, click “Leave” .   The Dremio Jobs page shows the jobs that Dremio has completed or are currently being run. The left provides a list of jobs and the right shows detailed information about the selected job.  If you look at your jobs in Dremio you will see the jobs that have been passed down from Tableau as well as the jobs that you have run in Dremio. In the list of jobs on the left you see that each job shows the Dataset, User, Start Time, Duration and End Time. Notice that the duration of your jobs both in Tableau and Dremio are  You will notice that next to some Duration values, you will see a flame. The flame identifies that the query performed was accelerated by a Dremio reflection.  As you continue to create visualizations in Tableau, reference back to the Jobs Page to see how fast Dremio is returning the response.   "
+},
+{
+	"uri": "/75-exploring-dataset-in-tableau/751-review-count.html",
+	"title": "Reviewing count of records by Date",
+	"tags": [],
+	"description": "",
+	"content": "   Navigate back to your Tableau Online Workbook which should still show the count of NYC_Taxi records.\n  Count the records by pickup date by dragging the pickup_date dimension to the column bar. Tableau is now showing the count of records for each year in the dataset.\n Let’s get a little more granular with the data by examining the data by month. Hover over the blue YEAR(pickup_date) and click the dropdown arrow. Tableau provides many different options for how to represent that data. Click on the first Month option on the list  Tableau is now showing the data that is grouped based on the month of the record. This is interesting in showing Taxi usage each month but does not show any relational analysis like month over month. To do this, Hover over the blue YEAR(pickup_date) and click the dropdown arrow. Click the second month option that has the Month \u0026amp; Year listed and notice the difference.\n "
+},
+{
+	"uri": "/75-exploring-dataset-in-tableau/752-impact-month.html",
+	"title": "How Does Month Impact Surcharge",
+	"tags": [],
+	"description": "",
+	"content": "  Clear your Tableau sheet by pressing the button on the Tableau toolbar and selecting “Clear Sheet” .  Now you are going to examine how each month of the year impacts the surcharge of a taxi ride. To do this first you are going to drag “Pickup_Date” to the columns bar and select Month from the drop down.   **Remember we are looking for the sum for each month not a month over month comparison** Now drag the surcharge measure to the rows bar. Tableau automatically selects the Sum of the records. For this lab, we want to see the total amount of Surcharge dollars spent so we will keep it at sum.   Now that you have a measure and dimension you should see a chart that shows the sum of surcharge by each month. Tableau automatically choose the line chart for this visualization but we want to see this as a bar chart. Under the Marks box, click the dropdown menu next to Automatic and select “Bar” Your visualization should look like this: Which month is the highest for Surcharges? March   "
+},
+{
+	"uri": "/75-exploring-dataset-in-tableau/753-review-jobs.html",
+	"title": "Reviewing the Jobs in Dremio",
+	"tags": [],
+	"description": "",
+	"content": "  Navigate back to your Dremio UI and click on the jobs tab.    Everytime you change a parameter or add a field to your Tableau analysis, Tableau passes back a SQL query for Dremio to perform. You can see all of the jobs that have run in Dremio. Notice the duration is "
+},
+{
+	"uri": "/80-joining-datasets-in-dremio/801-create-physical-dataset.html",
+	"title": "Creating Physical Dataset",
+	"tags": [],
+	"description": "",
+	"content": "  In Dremio, navigate to the Dremio Home Screen and click on your S3 bucket in the bottom left corner of the screen. Click on the same named “dremio-data-lake-AccountID” in the middle of the screen, then click on \"dremioworkshopdata\" and notice that you have a folder that says nyc weather.  Click on the nyc weather folder and notice one Parquet file. We are going to convert this to a PDS by clicking “Format File” under Action.  The format box will appear, click Save.   You will now see a preview of the table that shows the different fields in the dataset.    Click the save icon to save the dataset as nyc_weather to your Dremio Home Space. Navigate back to your Dremio Home Screen and under your Home Space you should see three different Virtual Datasets.  "
+},
+{
+	"uri": "/80-joining-datasets-in-dremio/802-joining-datasets-weather-taxi.html",
+	"title": "Joining the Taxi &amp; Weather Dataset",
+	"tags": [],
+	"description": "",
+	"content": " Navigate back to the data tab and click “join” located under the SQL Editor.   Dremio allows you to join datasets using Inner, Left Outer, Right Outer or Full Outer joins. Dremio also provides the ability to recommend datasets to join based on past history. Since this is the first time we are joining a dataset, there are no recommendations. You will create a join by browsing for a Virtual Dataset. Click search and search for your newly created nyc_weather Virtual Dataset. Once you have found the correct dataset, click Next.  We are going to do an Inner join based on date. Drag Pickup_Date from the NYC_Taxi dataset on the left. Next, drag DATE from the nyc_weather dataset on the right. Once you have both fields in the join, click Apply  Once you click Apply, Dremio will join the two data sets and return a preview of the newly joined dataset. Scroll through the fields and notice how now you have taxi and weather information.  Save the new dataset by clicking the icon and save as “nyc_taxi_weather” in your Home Space..    "
+},
+{
+	"uri": "/80-joining-datasets-in-dremio/803-connect-combined-dataset-tableau.html",
+	"title": "Connect to Joined Dataset in Tableau ",
+	"tags": [],
+	"description": "",
+	"content": "   In your Tableau workbook, navigate to the “Data Source” tab at the bottom of the screen.\n\n Remove the NYC_Taxi table \nRefresh your Dremio connection to Tableau by clicking the refresh icon, located in the Tableau toolbar at the top of your screen.\n\n Under Table on the left hand side, input “nyc_taxi_weather”, click the search icon and drag the table to the center of your screen.\n  Navigate back to your Tableau sheet and look at the fields on the left. Notice you now have taxi and weather data.\n \n"
+},
+{
+	"uri": "/10-section1/101-deploying-dremio/1011-deploying.html",
+	"title": "Deploying Dremio ",
+	"tags": [],
+	"description": "",
+	"content": "Deploying Dremio  In this section, you will learn how to quickly deploy a Dremio environment on the AWS Marketplace using a Cloud Formation Template.   Navigate to the AWS Marketplace and sign in to your AWS console if you have not already Click on the AWS Marketplace listing titled Dremio.   For this workship you will be using Dremio’s Community Edition. Dremio Community Edition is a free tier that allows you to query an unlimited amount of data from an unlimited number of data sources.     "
+},
+{
+	"uri": "/10-section1/101-deploying-dremio/1012-configuring.html",
+	"title": "Configuring and Launching  Dremio",
+	"tags": [],
+	"description": "",
+	"content": "Configuring and Launching the Dremio CloudFormation Template   From the Dremio AWS Marketplace Listing, click the yellow \"Continue to Subscribe\" button on the right.  Accept the terms and conditions by clicking on the yellow button. This will take few minutes and at the end will enable the \"Continue to Configuration\" button on top right hand corner. Click on the yellow Continue to Configuration  button in the top right.   Configuring the Cloud Formation Template.   Ensure the following options are selected:   Delivery Method: Dremio Deployment Software Version: Select latest Region: US West (Oregon)(Note: Image below is not representative of region)   Once complete, click the yellow \"Continue to Launch button\" Launching the Cloud Formation Template  Here you will review your configuration details and then choose how you will launch Dremio.  Under the “Choose Action” drop-down, select Launch CloudFormation and click the yellow \"Launch\" button.   "
+},
+{
+	"uri": "/10-section1/101-deploying-dremio/1013-cloudformationstack.html",
+	"title": "Creating the Dremio CloudFormation Stack",
+	"tags": [],
+	"description": "",
+	"content": "Creating the Dremio CloudFormation Stack   Create Stack  Ensure the following options are checked to mirror the image below. *Note* that the Amazon S3 URL will be different from the example. Once the correct options are checked, click \"Next\" at the bottom of the screen.  Specify Stack Details   Provide a Stack Name. An example would be Dremio-Modernization-Workshop.  Make your selections as per the image below. Configure Stack Options For this page, you do not need to add anything additional, continue by pressing \"Next\" at the bottom of the screen   Review Stack  Review the inputs and make sure they match the steps above. At the bottom of the screen under “Capabilities” click that the check box that acknowledges that CloudFormation might create IAM resources.  Once finished, press next at the bottom of the screen. Select the acknowledgment check box and click  \"Create Stack\"  Now you should see the CloudFormation Status say “CREATE_IN_PROGRESS”. It should take approximately 2 minutes to create the stack. Once the stack is completed, the status will change to CREATE_COMPLETE. Once the stack has been created, navigate to the “Outputs” tab under the name of your CloudFormation Stack From the “Outputs” tab, you should see the DremioPublicEndpoint which will be an IP Address. Click the IP Address to launch Dremio   "
+},
+{
+	"uri": "/10-section1/101-deploying-dremio/1014-launching-dremio.html",
+	"title": "Launching Dremio and Setting up a Dremio Project",
+	"tags": [],
+	"description": "",
+	"content": "Launching Dremio and Setting up a Dremio Project  After clicking on the IP Address under Outputs you will be brought to Dremio’s AWS Edition. Dremio will automatically look for any projects that are already available before having you set up your own project.   Authenticating your AWS Instance:  (This is only applicable if you have existing project, else skip to \"Create a Project\")  On the Authentication Screen (pictured above) Dremio will need to verify the EC2 instance ID that you are using. Dremio will automatically add your Instance ID. Once your Instance ID has populated, press Authenticate.   Creating a Project: Dremio allows users to create Projects which are separate instances of Dremio that do not share any data or resources. Projects can be managed independently of each other. Dremio allows for multiple Projects to be created within a single AWS account. Under the “Create a Project” screen, click “Create Project” Setting up your project  For this page, fill in the necessary information to create a Dremio Project:   Under Project Name input: Dremio Modernization Workshop Under Initial Engine Configuration: Leave the default of Medium (4 nodes) Enable Automatic Backups: Turn off  IAM Role: Default   Your inputs should look like the image below: Once complete, click Create  Creating Project Environment  Dremio will automatically create your Project Environment by deploying the EC2 Instances, connecting the Instances to a S3 bucket and allocating the EBS \u0026 EFS storage. This step should take no more than 5 minutes to complete. You will see green check marks appear as each step is completed. Registering for your Dremio Account \u0026 Project  Once the setup is complete, you will need to accept Dremio’s License and Services Agreement by clicking “I Accept”  Next you will need to create your Admin Account in Dremio by filing out the Admin Account Information.  Once you have filled out all the information, click Next to be taken do the Dremio User-Interface.   "
+},
+{
+	"uri": "/categories.html",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags.html",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

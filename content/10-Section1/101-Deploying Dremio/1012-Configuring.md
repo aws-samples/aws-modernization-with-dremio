@@ -11,10 +11,19 @@ weight = 1012
     <br/><br/>
     
    <ol>
-        <li>From the Dremio AWS Marketplace Listing, click the yellow <b>"Continue to Subscribe"</b> button on the right.</li>
-         <img src="../../images/dremio3.png" style="margin:15px 0px; border:1px solid black"/>
-        <li> Accept the terms and conditions by clicking on the yellow button. This will take few minutes and at the end will enable the <b>"Continue to Configuration"</b> button on top right hand corner. Click on the yellow  <b>Continue to Configuration </b> button in the top right. </li>
-       <img src="../../images/dremio3yellow.png" style="margin:15px 0px; border:1px solid black"/>
+        <li>From the “Cloud Connection” screen, click “Launch Stack” .</li>
+         <img src="../../images/newdremio4.png" style="margin:15px 0px; border:1px solid black"/>
+        <li> “Launch Stack” will take you to the AWS cloud formation template. Enter the following: </li>
+      <br/>
+      Stack Name: Dremio-DevDay <br/>
+      VPC: Select the VPC that is associated with dremioWorkshop <br/>
+      Subnets: Select the <b>PUBLIC subnet</b> that is associated with dremioWorkshop 
+        <img src="../../images/newdremio5.png" style="margin:15px 0px; border:1px solid black"/>
+        <img src="../../images/newdremio6.png" style="margin:15px 0px; border:1px solid black"/>
+        <br/>
+        Check “I acknowledge that AWS CloudFormation might create IAM resources.”
+        <br/>
+        <br/>
         <li> Configuring the Cloud Formation Template. </li>
         <br/>
         Ensure the following options are selected:
@@ -22,21 +31,19 @@ weight = 1012
          <ul>
         <li>Delivery Method: Dremio Deployment</li>
         <li>Software Version: Select latest</li>
-        <li>Region: <b>US West (Oregon)</b></li>(Note: Image below is not representative of region)
+        <li>Region: <b>US East (Viriginia)</b></li>
         </ul>
         <br/>
         Once complete, click the yellow <b>"Continue to Launch button"</b>
+        <br/>
+        <br/>
+        <li>Click “Create Stack” </li>
+           At this point, AWS is creating the Cloud Formation template. Click back into your Dremio Cloud tab and you should see Dremio Cloud creating and connecting to the stack.
+         <li>Once Dremio successfully connects to AWS, the next step will be to add additional Dremio users to your Dremio Cloud project. For the purposes of this workshop, we will not be adding any additional users. Click “Finish” to create your project.</li>
 
-         <img src="../../images/dremio4.png" style="margin:15px 0px; border:1px solid black"/>
+         <img src="../../images/newdremio7.png" style="margin:15px 0px; border:1px solid black"/>
 
-        <li>Launching the Cloud Formation Template</li>
-         <br/>
-        Here you will review your configuration details and then choose how you will launch Dremio.  
-         <br/>
-        Under the <b>“Choose Action”</b> drop-down, select Launch CloudFormation and click the yellow <b>"Launch"</b> button. 
-
-<img src="../../images/dremio5.png" style="margin:15px 0px; border:1px solid black"/>
-
+        
    </ol>
 
    

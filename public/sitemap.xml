@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/</loc>
+  </url>
+  
+  <url>
+    <loc>/10-section1.html</loc>
+  </url>
+  
+  <url>
+    <loc>/20-explore-dremio.html</loc>
+  </url>
+  
+  <url>
+    <loc>/30-connect-data-source.html</loc>
+  </url>
+  
+  <url>
+    <loc>/40-explore-data-create-virtual-datasets.html</loc>
+  </url>
+  
+  <url>
+    <loc>/50-create-virtual-datasets.html</loc>
+  </url>
+  
+  <url>
+    <loc>/60-connecting-to-tableau.html</loc>
+  </url>
+  
+  <url>
+    <loc>/70-exploring-dremio-jobs.html</loc>
+  </url>
+  
+  <url>
+    <loc>/75-exploring-dataset-in-tableau.html</loc>
+  </url>
+  
+  <url>
+    <loc>/80-joining-datasets-in-dremio.html</loc>
+  </url>
+  
+  <url>
+    <loc>/90-cleanups.html</loc>
+  </url>
+  
+  <url>
+    <loc>/10-section1/100-what-is-lf.html</loc>
+  </url>
+  
+  <url>
+    <loc>/10-section1/101-deploying-dremio.html</loc>
+  </url>
+  
+  <url>
+    <loc>/20-explore-dremio/201-dremio-home-screen.html</loc>
+  </url>
+  
+  <url>
+    <loc>/20-explore-dremio/202-creating-a-folder-in-your-personal-space.html</loc>
+  </url>
+  
+  <url>
+    <loc>/20-explore-dremio/203-set-up-a-space-to-collaborate-with-other-users.html</loc>
+  </url>
+  
+  <url>
+    <loc>/20-explore-dremio/204-explore-the-different-data-connections-that-dremio-supports.html</loc>
+  </url>
+  
+  <url>
+    <loc>/30-connect-data-source/301-connect-to-s3.html</loc>
+  </url>
+  
+  <url>
+    <loc>/40-explore-data-create-virtual-datasets/401-finding-dataset.html</loc>
+  </url>
+  
+  <url>
+    <loc>/40-explore-data-create-virtual-datasets/402-exploring-dataset.html</loc>
+  </url>
+  
+  <url>
+    <loc>/50-create-virtual-datasets/501-create-virtual-dataset.html</loc>
+  </url>
+  
+  <url>
+    <loc>/50-create-virtual-datasets/502-add-tags-dataset.html</loc>
+  </url>
+  
+  <url>
+    <loc>/50-create-virtual-datasets/503-create-calculated-field.html</loc>
+  </url>
+  
+  <url>
+    <loc>/50-create-virtual-datasets/504-edit-vitual-dataset.html</loc>
+  </url>
+  
+  <url>
+    <loc>/50-create-virtual-datasets/505-set-reflection.html</loc>
+  </url>
+  
+  <url>
+    <loc>/60-connecting-to-tableau/601-sign-up.html</loc>
+  </url>
+  
+  <url>
+    <loc>/60-connecting-to-tableau/602-connect-tableau-to-dremio.html</loc>
+  </url>
+  
+  <url>
+    <loc>/60-connecting-to-tableau/603-connect-tableau-dataset.html</loc>
+  </url>
+  
+  <url>
+    <loc>/70-exploring-dremio-jobs/701-counting-records.html</loc>
+  </url>
+  
+  <url>
+    <loc>/70-exploring-dremio-jobs/702-explore-dremio-jobs.html</loc>
+  </url>
+  
+  <url>
+    <loc>/75-exploring-dataset-in-tableau/751-review-count.html</loc>
+  </url>
+  
+  <url>
+    <loc>/75-exploring-dataset-in-tableau/752-impact-month.html</loc>
+  </url>
+  
+  <url>
+    <loc>/75-exploring-dataset-in-tableau/753-review-jobs.html</loc>
+  </url>
+  
+  <url>
+    <loc>/80-joining-datasets-in-dremio/801-create-physical-dataset.html</loc>
+  </url>
+  
+  <url>
+    <loc>/80-joining-datasets-in-dremio/802-joining-datasets-weather-taxi.html</loc>
+  </url>
+  
+  <url>
+    <loc>/80-joining-datasets-in-dremio/803-connect-combined-dataset-tableau.html</loc>
+  </url>
+  
+  <url>
+    <loc>/10-section1/101-deploying-dremio/1011-deploying.html</loc>
+  </url>
+  
+  <url>
+    <loc>/10-section1/101-deploying-dremio/1012-configuring.html</loc>
+  </url>
+  
+  <url>
+    <loc>/10-section1/101-deploying-dremio/1013-cloudformationstack.html</loc>
+  </url>
+  
+  <url>
+    <loc>/10-section1/101-deploying-dremio/1014-launching-dremio.html</loc>
+  </url>
+  
+  <url>
+    <loc>/categories.html</loc>
+  </url>
+  
+  <url>
+    <loc>/tags.html</loc>
+  </url>
+  
+</urlset>

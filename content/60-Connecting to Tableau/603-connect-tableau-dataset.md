@@ -13,15 +13,15 @@ weight = 603
      <li>  Under  “Database”, select “DREMIO”</li>
        
        <li>Under “Schema”, enter the name of your Dremio Homespace (where you saved your VDS)</li>
-       <img src="../../images/dremio48.png" style="margin:15px 0px; border:1px solid black"/>
+     
 
 <li>Under Table, enter the name of the VDS (NYC_Taxi) that you saved in Dremio</li>
 </ul>
 <br/>
-Your Tableau Inputs should look like this (IP Address & Schema name will be different)
-       <img src="../../images/dremio49.png" style="margin:15px 0px; border:1px solid black"/>
-        <li> Drag the NYC_Taxi table from the left side under <b>“Connections” </b> to the center of the workbook where it says <b> “Drag Tables Here” </b> 
-</li>
+
+        <li>  Drag the NYC_Taxi table from the left side under “Connections” to the center of the workbook where it says “Drag Tables Here”
+  <img src="../../images/newdremio40.png" style="margin:15px 0px; border:1px solid black"/>
+        </li>
         Now that you have connected Dremio to Tableau and selected the Table to analyze, you can now start creating visualizations.  Click on “Sheet 1” in the bottom left corner of your Tableau Workbook.  Your screen should look like this:
        <img src="../../images/dremio50.png" style="margin:15px 0px; border:1px solid black"/>
         

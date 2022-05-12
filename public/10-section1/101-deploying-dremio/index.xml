@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>How It Works on Dremio Modernization Workshop</title>
+    <link>/10-section1/101-deploying-dremio.html</link>
+    <description>Recent content in How It Works on Dremio Modernization Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="/10-section1/101-deploying-dremio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deploying Dremio </title>
+      <link>/10-section1/101-deploying-dremio/1011-deploying.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/10-section1/101-deploying-dremio/1011-deploying.html</guid>
+      <description>Deploying Dremio  In this section, you will learn how to quickly deploy a Dremio environment on the AWS Marketplace using a Cloud Formation Template.   Navigate to the AWS Marketplace and sign in to your AWS console if you have not already Click on the AWS Marketplace listing titled Dremio.   For this workship you will be using Dremio’s Community Edition. Dremio Community Edition is a free tier that allows you to query an unlimited amount of data from an unlimited number of data sources.</description>
+    </item>
+    
+    <item>
+      <title>Configuring and Launching  Dremio</title>
+      <link>/10-section1/101-deploying-dremio/1012-configuring.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/10-section1/101-deploying-dremio/1012-configuring.html</guid>
+      <description>Configuring and Launching the Dremio CloudFormation Template   From the Dremio AWS Marketplace Listing, click the yellow &#34;Continue to Subscribe&#34; button on the right.  Accept the terms and conditions by clicking on the yellow button. This will take few minutes and at the end will enable the &#34;Continue to Configuration&#34; button on top right hand corner. Click on the yellow Continue to Configuration  button in the top right.</description>
+    </item>
+    
+    <item>
+      <title>Creating the Dremio CloudFormation Stack</title>
+      <link>/10-section1/101-deploying-dremio/1013-cloudformationstack.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/10-section1/101-deploying-dremio/1013-cloudformationstack.html</guid>
+      <description>Creating the Dremio CloudFormation Stack   Create Stack  Ensure the following options are checked to mirror the image below. *Note* that the Amazon S3 URL will be different from the example. Once the correct options are checked, click &#34;Next&#34; at the bottom of the screen.  Specify Stack Details   Provide a Stack Name. An example would be Dremio-Modernization-Workshop.  Make your selections as per the image below.</description>
+    </item>
+    
+    <item>
+      <title>Launching Dremio and Setting up a Dremio Project</title>
+      <link>/10-section1/101-deploying-dremio/1014-launching-dremio.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/10-section1/101-deploying-dremio/1014-launching-dremio.html</guid>
+      <description>Launching Dremio and Setting up a Dremio Project  After clicking on the IP Address under Outputs you will be brought to Dremio’s AWS Edition. Dremio will automatically look for any projects that are already available before having you set up your own project.   Authenticating your AWS Instance:  (This is only applicable if you have existing project, else skip to &#34;Create a Project&#34;)  On the Authentication Screen (pictured above) Dremio will need to verify the EC2 instance ID that you are using.</description>
+    </item>
+    
+  </channel>
+</rss>
