@@ -24,19 +24,7 @@ weight = 1012
         Check “I acknowledge that AWS CloudFormation might create IAM resources.”
         <br/>
         <br/>
-        <li> Configuring the Cloud Formation Template. </li>
-        <br/>
-        Ensure the following options are selected:
-         <br/>
-         <ul>
-        <li>Delivery Method: Dremio Deployment</li>
-        <li>Software Version: Select latest</li>
-        <li>Region: <b>US East (Viriginia)</b></li>
-        </ul>
-        <br/>
-        Once complete, click the yellow <b>"Continue to Launch button"</b>
-        <br/>
-        <br/>
+        
         <li>Click “Create Stack” </li>
            At this point, AWS is creating the Cloud Formation template. Click back into your Dremio Cloud tab and you should see Dremio Cloud creating and connecting to the stack.
          <li>Once Dremio successfully connects to AWS, the next step will be to add additional Dremio users to your Dremio Cloud project. For the purposes of this workshop, we will not be adding any additional users. Click “Finish” to create your project.</li>
