@@ -10,7 +10,7 @@ autoNav = true
    To setup workshop environment, follow these steps: 
 ## AWS-hosted Live event (workshop)
 
-1. Use the hashcode provided by AWS team and enter it into to your AWS account. <a href="https://dashboard.eventengine.run/dashboard" target="_blank" />Event Engine - Team Dashboard <
+1. Use the hashcode provided by AWS team and enter it into to your AWS account. <a href="https://dashboard.eventengine.run/dashboard" target="_blank" />Event Engine - Team Dashboard </a>
 1. Pick Email One Time Password OPT, accept the terms, and login.
 1. Check your email for a one-time password to login. Afterward, you will see a dashboard.
 1. Click on Set your Team Name in the dashboard by entering your name. This will help the workshop support team to help you troubleshoot when you need it.
