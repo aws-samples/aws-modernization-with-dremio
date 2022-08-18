@@ -27,7 +27,7 @@ chapter = true
      When you created your lab environment, AWS created a new user called “dremio-user”. <br/> To get your Access Key ID & Access Secret Key, navigate to your AWS console and search <b> “Cloud Shell” </b>service. 
       <br/> 
      <img src="../../images/newdremio14-1.png" style="margin:15px 0px; border:1px solid black"/>
-     <br/> Once the “Cloud Shell” terminal is prepared, enter the following command: <br/>
+     <br/> Once the “Cloud Shell” terminal is prepared (~2 minutes), enter the following command:  <br/>
      
      <br/> 
      <b> “aws iam create-access-key --user-name dremio-user” </b> and press enter. <br/> <br/> AWS will generate a new Access Key ID & Access Secret Key for you to use. <br/>

@@ -23,7 +23,9 @@ In this section, you will learn how to quickly deploy a Dremio Cloud environment
       <i>Dremio Cloud includes a forever-free tier This is Dremio’s Community Edition.  Dremio Community Edition is a free tier that allows you to query an unlimited amount of data from an unlimited number of data sources. All you pay for is AWS consumption fees.   <i/>
      <img src="../../images/newdremio1.png" style="margin:15px 0px; border:1px solid black"/>
      <img src="../../images/newdremio2.png" style="margin:15px 0px; border:1px solid black"/></li>
-      
+      <li> Create your password for Dremio Cloud
+                <img src="../../images/newdremio2a.png" style="margin:15px 0px; border:1px solid black"/></li>
+            </li>
       <li>Complete the form with the following information:  </li>
           <br/>
           Organization Name: DevDay <br/>

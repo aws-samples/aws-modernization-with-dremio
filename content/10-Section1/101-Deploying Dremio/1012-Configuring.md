@@ -27,9 +27,9 @@ weight = 1012
         
         <li>Click “Create Stack” </li>
            At this point, AWS is creating the Cloud Formation template. Click back into your Dremio Cloud tab and you should see Dremio Cloud creating and connecting to the stack.
-         <li>Once Dremio successfully connects to AWS, the next step will be to add additional Dremio users to your Dremio Cloud project. For the purposes of this workshop, we will not be adding any additional users. Click “Finish” to create your project.</li>
+         <li>Once Dremio successfully connects to AWS, you will be sent to the Dremio’s home screen</li>
 
-         <img src="../../images/newdremio7.png" style="margin:15px 0px; border:1px solid black"/>
+         
 
         
    </ol>
