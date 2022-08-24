@@ -17,7 +17,7 @@ autoNav = true
 1. Click on the AWS Console button. This will bring up a popup window AWS Console Login.
 1. Click on Open AWS Console. This will log you into the <a href="https://us-west-2.console.aws.amazon.com/console/home?region=us-west-2"/> AWS account. </a> .
 1. You will use this account for the entire workshop duration.
-1. On the day of the workshop, you will Launch the stack. <a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=dremio-workshop&templateURL=https://s3.amazonaws.com/lk-formation-sk.s3.amazonaws.com/create-dremioworkshop-infrastructure.yml" target="_blank" />launch the stack</a>  needed for the workshop. Click `Next` till the end and then select acknowledgement checkbox. Then click "Create Stack"
+1. On the day of the workshop, you will Launch the stack. <a href="https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=dremio-workshop&templateURL=https://s3.amazonaws.com/lk-formation-sk.s3.amazonaws.com/create-dremioworkshop-infrastructure.yml" target="_blank" />launch the stack</a>  needed for the workshop. Click `Next` till the end and then select acknowledgement checkbox. Then click "Create Stack"
 
     
 ## Non-AWS-Hosted Event
