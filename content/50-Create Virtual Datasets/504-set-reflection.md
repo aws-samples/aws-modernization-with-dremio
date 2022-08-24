@@ -5,6 +5,7 @@ weight = 504
 +++
 
 <div style="text-align: left">
+ Navigate back to the NYC_Taxi VDS
  <ol>
       <li>Click on the “Reflection” Tab.  </li>
 
